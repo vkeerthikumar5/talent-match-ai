@@ -3,7 +3,7 @@ import axios from "axios";
 
 // Create an axios instance
 const api = axios.create({
-  baseURL: "http://127.0.0.1:8000/api", // your backend base URL
+  baseURL: "https://talent-match-ai.onrender.com/api", // your backend base URL
 });
 
 // Add a request interceptor to attach token automatically
