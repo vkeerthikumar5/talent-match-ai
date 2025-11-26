@@ -149,7 +149,7 @@ REST_FRAMEWORK = {
 
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",  # or your React dev URL
+    "https://talent-match-ai-seven.vercel.app",
 ]
 CORS_ALLOW_CREDENTIALS = True
 
