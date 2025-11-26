@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Email Notification</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f4f4f7;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Responsive container */
+    .wrapper {
+      width: 100%;
+      table-layout: fixed;
+      background: #f4f4f7;
+      padding: 20px 0;
+    }
+
+    .main {
+      background: #ffffff;
+      border-radius: 10px;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 650px;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    /* Header */
+    .header {
+      background: #4F46E5;
+      padding: 25px;
+      text-align: center;
+    }
+
+    .header h1 {
+      color: #ffffff;
+      margin: 0;
+      font-size: 26px;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    /* Body */
+    .content {
+      padding: 30px 35px;
+      font-size: 16px;
+      color: #333333;
+      line-height: 1.7;
+    }
+
+    /* Button */
+    .btn {
+      display: inline-block;
+      padding: 12px 22px;
+      background: #4F46E5;
+      color: white !important;
+      text-decoration: none;
+      border-radius: 6px;
+      margin-top: 20px;
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    /* Footer */
+    .footer {
+      background: #f9fafb;
+      padding: 20px 10px;
+      text-align: center;
+      font-size: 13px;
+      color: #777777;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .content {
+        padding: 20px;
+      }
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <table class="wrapper" width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+      <td>
+        
+        <table class="main" cellpadding="0" cellspacing="0">
+
+          <!-- Header -->
+          <tr>
+            <td class="header">
+              <h1>TalentMatch AI</h1>
+            </td>
+          </tr>
+
+          <!-- Content -->
+          <tr>
+            <td class="content">
+              <p>{{ message|safe }}</p>
+
+              <p>If you have any questions or need assistance, feel free to reply to this email.</p>
+
+              
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td class="footer">
+              © {{ year }} TalentMatch AI — All Rights Reserved
+            </td>
+          </tr>
+
+        </table>
+
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
